@@ -1,5 +1,6 @@
 package ADO2_Atividades.Interface;
 import ADO2_Atividades.Interface.Operacao;
+import java.util.Date;
 
 public class JF_Primeira extends javax.swing.JFrame {
 
@@ -9,6 +10,7 @@ public class JF_Primeira extends javax.swing.JFrame {
     public JF_Primeira() {
         initComponents();
         Limpar();
+        String();
     }
     
     public void Limpar() {
@@ -17,6 +19,11 @@ public class JF_Primeira extends javax.swing.JFrame {
         jTF_NumC.setText("");
         jTF_Resultado.setText("");
         jLabel_Mensagem.setText("");
+    }
+    
+    public void String() {
+        Date date = new Date();
+        jLabel_Data.setText(date.toString());
     }
     
     /**
@@ -34,6 +41,7 @@ public class JF_Primeira extends javax.swing.JFrame {
         jLabel_titulo = new javax.swing.JLabel();
         jPanel_criador = new javax.swing.JPanel();
         jLabel_criador = new javax.swing.JLabel();
+        jLabel_Data = new javax.swing.JLabel();
         jButton_Voltar = new javax.swing.JButton();
         jLabel_Valor1 = new javax.swing.JLabel();
         jLabel_Valor2 = new javax.swing.JLabel();
@@ -79,18 +87,24 @@ public class JF_Primeira extends javax.swing.JFrame {
         jLabel_criador.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel_criador.setText("por Rafael Ferreira Goulart");
 
+        jLabel_Data.setFont(new java.awt.Font("Yu Gothic", 3, 12)); // NOI18N
+        jLabel_Data.setText("01/2000");
+
         javax.swing.GroupLayout jPanel_criadorLayout = new javax.swing.GroupLayout(jPanel_criador);
         jPanel_criador.setLayout(jPanel_criadorLayout);
         jPanel_criadorLayout.setHorizontalGroup(
             jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_criadorLayout.createSequentialGroup()
-                .addGap(0, 229, Short.MAX_VALUE)
+                .addComponent(jLabel_Data, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel_criador)
                 .addContainerGap())
         );
         jPanel_criadorLayout.setVerticalGroup(
             jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+            .addGroup(jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel_Data))
         );
 
         jButton_Voltar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -314,6 +328,7 @@ public class JF_Primeira extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Limpar;
     private javax.swing.JButton jButton_Mult;
     private javax.swing.JButton jButton_Voltar;
+    private javax.swing.JLabel jLabel_Data;
     private javax.swing.JLabel jLabel_Mensagem;
     private javax.swing.JLabel jLabel_Texto1;
     private javax.swing.JLabel jLabel_Texto2;

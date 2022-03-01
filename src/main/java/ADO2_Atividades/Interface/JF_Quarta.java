@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ADO2_Atividades.Interface;
+import java.util.Date;
 
 /**
  *
@@ -15,6 +12,12 @@ public class JF_Quarta extends javax.swing.JFrame {
      */
     public JF_Quarta() {
         initComponents();
+        String();
+    }
+    
+    public void String() {
+        Date date = new Date();
+        jLabel_Data.setText(date.toString());
     }
 
     /**
@@ -31,7 +34,8 @@ public class JF_Quarta extends javax.swing.JFrame {
         jLabel_titulo = new javax.swing.JLabel();
         jPanel_criador = new javax.swing.JPanel();
         jLabel_criador = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jLabel_Data = new javax.swing.JLabel();
+        jButton_Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -51,25 +55,31 @@ public class JF_Quarta extends javax.swing.JFrame {
         jLabel_criador.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel_criador.setText("por Rafael Ferreira Goulart");
 
+        jLabel_Data.setFont(new java.awt.Font("Yu Gothic", 3, 12)); // NOI18N
+        jLabel_Data.setText("01/2000");
+
         javax.swing.GroupLayout jPanel_criadorLayout = new javax.swing.GroupLayout(jPanel_criador);
         jPanel_criador.setLayout(jPanel_criadorLayout);
         jPanel_criadorLayout.setHorizontalGroup(
             jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_criadorLayout.createSequentialGroup()
-                .addGap(0, 229, Short.MAX_VALUE)
+                .addComponent(jLabel_Data, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel_criador)
                 .addContainerGap())
         );
         jPanel_criadorLayout.setVerticalGroup(
             jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+            .addGroup(jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                .addComponent(jLabel_Data))
         );
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Voltar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton_Voltar.setText("Voltar");
+        jButton_Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_VoltarActionPerformed(evt);
             }
         });
 
@@ -84,7 +94,7 @@ public class JF_Quarta extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel_titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(jButton_Voltar)
                 .addContainerGap())
         );
         jPanel_menuLayout.setVerticalGroup(
@@ -92,9 +102,9 @@ public class JF_Quarta extends javax.swing.JFrame {
             .addGroup(jPanel_menuLayout.createSequentialGroup()
                 .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(jButton2))
+                    .addComponent(jButton_Voltar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                 .addGap(218, 218, 218))
         );
 
@@ -106,7 +116,7 @@ public class JF_Quarta extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel_menu, 301, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -117,18 +127,18 @@ public class JF_Quarta extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_VoltarActionPerformed
         JF_Menu abrir = new JF_Menu();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,7 +176,8 @@ public class JF_Quarta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton_Voltar;
+    private javax.swing.JLabel jLabel_Data;
     private javax.swing.JLabel jLabel_criador;
     private javax.swing.JLabel jLabel_titulo;
     private javax.swing.JPanel jPanel1;

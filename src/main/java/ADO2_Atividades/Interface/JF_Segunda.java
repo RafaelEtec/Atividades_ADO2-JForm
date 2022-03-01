@@ -1,5 +1,6 @@
 package ADO2_Atividades.Interface;
 import ADO2_Atividades.Interface.Operacao;
+import java.util.Date;
 
 public class JF_Segunda extends javax.swing.JFrame {
 
@@ -9,6 +10,7 @@ public class JF_Segunda extends javax.swing.JFrame {
     public JF_Segunda() {
         initComponents();
         Limpar();
+        String();
     }
     
     public void Limpar() {
@@ -17,6 +19,11 @@ public class JF_Segunda extends javax.swing.JFrame {
         jLabel_N1.setText("N x 1 = N1");
         jLabel_N2.setText("N x 2 = N2");
         jLabel_N3.setText("N x 3 = N3");
+    }
+    
+    public void String() {
+        Date date = new Date();
+        jLabel_Data.setText(date.toString());
     }
 
     /**
@@ -33,6 +40,7 @@ public class JF_Segunda extends javax.swing.JFrame {
         jLabel_titulo = new javax.swing.JLabel();
         jPanel_criador = new javax.swing.JPanel();
         jLabel_criador = new javax.swing.JLabel();
+        jLabel_Data = new javax.swing.JLabel();
         jButton_Voltar = new javax.swing.JButton();
         jLabel_Texto1 = new javax.swing.JLabel();
         jLabel_Texto2 = new javax.swing.JLabel();
@@ -64,18 +72,24 @@ public class JF_Segunda extends javax.swing.JFrame {
         jLabel_criador.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
         jLabel_criador.setText("por Rafael Ferreira Goulart");
 
+        jLabel_Data.setFont(new java.awt.Font("Yu Gothic", 3, 12)); // NOI18N
+        jLabel_Data.setText("01/2000");
+
         javax.swing.GroupLayout jPanel_criadorLayout = new javax.swing.GroupLayout(jPanel_criador);
         jPanel_criador.setLayout(jPanel_criadorLayout);
         jPanel_criadorLayout.setHorizontalGroup(
             jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_criadorLayout.createSequentialGroup()
-                .addGap(0, 229, Short.MAX_VALUE)
+                .addComponent(jLabel_Data, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel_criador)
                 .addContainerGap())
         );
         jPanel_criadorLayout.setVerticalGroup(
             jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel_criadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel_Data, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton_Voltar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -131,9 +145,9 @@ public class JF_Segunda extends javax.swing.JFrame {
             .addGroup(jPanel_menuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_menuLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_menuLayout.createSequentialGroup()
                         .addComponent(jLabel_titulo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton_Voltar)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_menuLayout.createSequentialGroup()
@@ -160,20 +174,19 @@ public class JF_Segunda extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel_menuLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_Mensagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel_menuLayout.createSequentialGroup()
-                        .addComponent(jButton_Mult)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                .addComponent(jButton_Mult)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel_Mensagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel_menuLayout.setVerticalGroup(
             jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_menuLayout.createSequentialGroup()
                 .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(jLabel_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(jButton_Voltar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel_criador, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jPanel_criador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel_menuLayout.createSequentialGroup()
@@ -197,10 +210,10 @@ public class JF_Segunda extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton_Limpar)))
                 .addGap(6, 6, 6)
-                .addComponent(jButton_Mult)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_Mensagem)
-                .addGap(15, 15, 15))
+                .addGroup(jPanel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_Mult)
+                    .addComponent(jLabel_Mensagem))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -211,7 +224,7 @@ public class JF_Segunda extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel_menu, 303, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -222,7 +235,7 @@ public class JF_Segunda extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
         );
 
         pack();
@@ -292,6 +305,7 @@ public class JF_Segunda extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Limpar;
     private javax.swing.JButton jButton_Mult;
     private javax.swing.JButton jButton_Voltar;
+    private javax.swing.JLabel jLabel_Data;
     private javax.swing.JLabel jLabel_Mensagem;
     private javax.swing.JLabel jLabel_N;
     private javax.swing.JLabel jLabel_N1;
